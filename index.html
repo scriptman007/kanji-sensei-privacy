@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Kanji Sensei</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --sapphire:   #0F52BA;
+      --sapphire-light: #e8effe;
+      --ink:        #1A1A2E;
+      --muted:      #6b7280;
+      --bg:         #F5F6FA;
+      --card:       #ffffff;
+      --border:     #e5e7eb;
+      --accent:     #0F52BA;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--sapphire);
+      color: white;
+      padding: 52px 24px 44px;
+      text-align: center;
+    }
+
+    .logo-circle {
+      width: 72px;
+      height: 72px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 32px;
+      font-family: 'Noto Serif JP', serif;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 14px;
+      opacity: 0.75;
+      margin-bottom: 4px;
+    }
+
+    /* ── Language toggle ── */
+    .lang-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .lang-btn {
+      padding: 8px 22px;
+      border-radius: 100px;
+      border: 2px solid rgba(255,255,255,0.4);
+      background: transparent;
+      color: white;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active,
+    .lang-btn:hover {
+      background: white;
+      color: var(--sapphire);
+      border-color: white;
+    }
+
+    /* ── Content ── */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .lang-section { display: none; }
+    .lang-section.visible { display: block; }
+
+    /* ── Last updated pill ── */
+    .updated-pill {
+      display: inline-block;
+      background: var(--sapphire-light);
+      color: var(--sapphire);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Section cards ── */
+    .policy-section {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 28px 28px 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .section-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--sapphire-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .section-header h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.2px;
+    }
+
+    .policy-section p,
+    .policy-section li {
+      font-size: 14.5px;
+      color: #374151;
+      line-height: 1.7;
+    }
+
+    .policy-section ul {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+
+    .policy-section li {
+      margin-bottom: 5px;
+    }
+
+    /* ── Highlight box ── */
+    .highlight-box {
+      background: var(--sapphire-light);
+      border-left: 4px solid var(--sapphire);
+      border-radius: 0 12px 12px 0;
+      padding: 14px 16px;
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--sapphire);
+      font-weight: 500;
+    }
+
+    /* ── Contact section ── */
+    .contact-card {
+      background: var(--sapphire);
+      border-radius: 18px;
+      padding: 28px;
+      color: white;
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      opacity: 0.85;
+      margin-bottom: 16px;
+    }
+
+    .contact-email {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 14px;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ── Japanese font override ── */
+    .ja {
+      font-family: 'Noto Serif JP', 'DM Sans', sans-serif;
+    }
+
+    .ja p, .ja li, .ja h2 {
+      font-family: 'Noto Serif JP', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-circle">漢字</div>
+  <h1>Kanji Sensei</h1>
+  <p>Privacy Policy &nbsp;·&nbsp; プライバシーポリシー</p>
+  <p>Eli Clarke</p>
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('en')">English</button>
+    <button class="lang-btn" onclick="setLang('ja')">日本語</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ══════════════ ENGLISH ══════════════ -->
+  <div id="en" class="lang-section visible">
+
+    <span class="updated-pill">Last updated: April 2025</span>
+
+    <div class="policy-section">
+      <div class="section-header">
+        <div class="section-icon">👋</div>
+        <h2>Introduction</h2>
+      </div>
+      <p>Welcome to <strong>Kanji Sensei</strong>, a JLPT kanji study app developed by <strong>Eli Clarke</strong>. This privacy policy explains what data the app collects, how it is used, and your rights as a user.</p>
+      <p style="margin-top:10px">By using Kanji Sensei, you agree to the practices described in this policy.</p>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-header">
+        <div class="section-icon">📦</div>
+        <h2>Data We Collect</h2>
+      </div>
+      <p>Kanji Sensei is designed with your privacy in mind. The app collects <strong>no personal data</strong> whatsoever. Specifically:</p>
+      <ul>
+        <li>No name, email address, or account information is collected</li>
+        <li>No location data is collected</li>
+        <li>No usage analytics or tracking is performed</li>
+        <li>No data is transmitted to any server or third party</li>
+      </ul>
+      <div class="highlight-box">
+        All data (your username, study progress, XP, streaks, and settings) is stored <strong>locally on your device only</strong> using your device's built-in storage. It never leaves your device.
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-header">
+        <div class="section-icon">💾</div>
+        <h2>Local Storage</h2>
+      </div>
+      <p>The following information is saved locally on your device to provide the app's features:</p>
+      <ul>
+        <li>Your chosen display name</li>
+        <li>Your selected JLPT target level</li>
+        <li>Quiz progress and stage completion</li>
+        <li>XP points and daily streak count</li>
+        <li>Missed kanji for review</li>
+        <li>Sound, volume, and vibration preferences</li>
+      </ul>
+      <p style="margin-top:10px">This data can be cleared at any time from the <strong>Settings → Reset Progress</strong> screen within the app, or by uninstalling the app.</p>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-header">
+        <div class="section-icon">🔒</div>
+        <h2>Third-Party Services</h2>
+      </div>
+      <p>Kanji Sensei does <strong>not</strong> use any third-party services, including:</p>
+      <ul>
+        <li>No advertising networks</li>
+        <li>No analytics platforms (e.g. Firebase, Google Analytics)</li>
+        <li>No crash reporting services</li>
+        <li>No social media integrations</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-header">
+        <div class="section-icon">👶</div>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>Kanji Sensei does not knowingly collect any information from children under the age of 13. Since the app collects no personal data at all, it is safe for users of all ages.</p>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-header">
+        <div class="section-icon">🔄</div>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>This privacy policy may be updated from time to time. Any changes will be reflected on this page with an updated date. We encourage you to review this page periodically.</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>Contact</h2>
+      <p>If you have any questions about this privacy policy or the app, please get in touch:</p>
+      <span class="contact-email">📧 your@email.com</span>
+      <p style="margin-top:12px; font-size:13px; opacity:0.7">Developer: Eli Clarke</p>
+    </div>
+
+  </div><!-- /en -->
+
+  <!-- ══════════════ JAPANESE ══════════════ -->
+  <div id="ja" class="lang-section ja">
+
+    <span class="updated-pill">最終更新日：2025年4月</span>
+
+    <div class="policy-section">
+      <div class="section-header">
+        <div class="section-icon">👋</div>
+        <h2>はじめに</h2>
+      </div>
+      <p><strong>漢字先生（Kanji Sensei）</strong>をご利用いただきありがとうございます。本アプリは、<strong>Eli Clarke</strong>が開発したJLPT漢字学習アプリです。このプライバシーポリシーでは、アプリが収集するデータ、その使用方法、およびユーザーの権利についてご説明します。</p>
+      <p style="margin-top:10px">本アプリをご利用いただくことで、このポリシーに記載された内容に同意したものとみなします。</p>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-header">
+        <div class="section-icon">📦</div>
+        <h2>収集するデータについて</h2>
+      </div>
+      <p>漢字先生はプライバシーを最優先に設計されています。本アプリは<strong>個人情報を一切収集しません</strong>。具体的には：</p>
+      <ul>
+        <li>氏名、メールアドレス、アカウント情報は収集しません</li>
+        <li>位置情報は収集しません</li>
+        <li>利用状況の分析やトラッキングは行いません</li>
+        <li>サーバーや第三者へのデータ送信は行いません</li>
+      </ul>
+      <div class="highlight-box">
+        ユーザー名、学習進捗、XP、連続学習日数、設定などのすべてのデータは、<strong>お使いのデバイス内にのみ保存</strong>されます。外部には一切送信されません。
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-header">
+        <div class="section-icon">💾</div>
+        <h2>ローカルストレージについて</h2>
+      </div>
+      <p>アプリの機能を提供するために、以下の情報がデバイス内にローカル保存されます：</p>
+      <ul>
+        <li>表示名（ニックネーム）</li>
+        <li>選択したJLPT目標レベル</li>
+        <li>クイズの進捗とステージの完了状況</li>
+        <li>XPポイントと連続学習日数</li>
+        <li>復習用の苦手漢字リスト</li>
+        <li>サウンド・音量・バイブレーションの設定</li>
+      </ul>
+      <p style="margin-top:10px">これらのデータは、アプリ内の<strong>設定 → 進捗をリセット</strong>からいつでも削除できます。また、アプリをアンインストールすることでも削除されます。</p>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-header">
+        <div class="section-icon">🔒</div>
+        <h2>第三者サービスについて</h2>
+      </div>
+      <p>漢字先生は以下を含む、いかなる第三者サービスも使用<strong>していません</strong>：</p>
+      <ul>
+        <li>広告ネットワーク</li>
+        <li>分析プラットフォーム（Firebase、Google Analyticsなど）</li>
+        <li>クラッシュレポートサービス</li>
+        <li>ソーシャルメディア連携</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-header">
+        <div class="section-icon">👶</div>
+        <h2>お子様のプライバシーについて</h2>
+      </div>
+      <p>漢字先生は13歳未満のお子様の情報を意図的に収集することはありません。本アプリは個人情報を一切収集しないため、すべての年齢層のユーザーに安全にご利用いただけます。</p>
+    </div>
+
+    <div class="policy-section">
+      <div class="section-header">
+        <div class="section-icon">🔄</div>
+        <h2>ポリシーの変更について</h2>
+      </div>
+      <p>本プライバシーポリシーは随時更新される場合があります。変更がある場合は、このページに更新日とともに反映されます。定期的にご確認いただくことをお勧めします。</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>お問い合わせ</h2>
+      <p>本プライバシーポリシーまたはアプリに関するご質問は、以下までご連絡ください：</p>
+      <span class="contact-email">📧 your@email.com</span>
+      <p style="margin-top:12px; font-size:13px; opacity:0.7">開発者：Eli Clarke</p>
+    </div>
+
+  </div><!-- /ja -->
+
+</main>
+
+<footer>
+  &copy; 2025 Eli Clarke · Kanji Sensei · All rights reserved
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.getElementById('en').classList.toggle('visible', lang === 'en');
+    document.getElementById('ja').classList.toggle('visible', lang === 'ja');
+    document.querySelectorAll('.lang-btn').forEach((btn, i) => {
+      btn.classList.toggle('active', (i === 0 && lang === 'en') || (i === 1 && lang === 'ja'));
+    });
+  }
+</script>
+
+</body>
+</html>
